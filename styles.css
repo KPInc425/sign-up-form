@@ -1,0 +1,111 @@
+@font-face {
+    font-family: Drugs;
+    src: url("/Drugs.otf");
+}
+:root {
+    --main-color: #0E0E0E;
+    --accent-color: silver;
+}
+
+body {
+    background-color: var(--main-color);
+    font-family: Drugs;
+}
+
+#mainContentContainer {
+    display: flex;
+    max-width: 75vw;
+    margin: auto;
+}
+
+#imgHallway {
+    width: max(33vw, 500px);
+    height: 100vh;
+}
+
+#imageContainer {
+    position: relative;
+    text-align: center;
+}
+
+#imageAttribution {
+    position: relative;
+    bottom: 30px;
+}
+
+.formSection {
+    /* border: 2px solid rgb(255, 0, 0); */
+    padding: 20px;
+}
+
+form>.formSection:first-of-type {
+    padding: 20vh 50px 50px 30px;
+    margin-top: 0;
+    font-size: larger;
+    font-weight: 900;
+}
+
+form>.formSection:nth-child(2) {
+    box-shadow: 0 4px 4px -4px grey;
+    border-top: 1px solid rgb(228, 228, 228);
+    background-color: #F9FAFB;
+}
+
+.formSection:nth-child(2) legend {
+    font-size: x-large;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.formSection:nth-child(2) label {
+    font-size: smaller;
+    font-weight: 900;
+}
+
+.formSection:nth-child(2) .formInput {
+    margin: 5px 25px 5px 0;
+}
+
+
+
+.formInput {
+    display: flex;
+    flex-direction: column;
+}
+
+#logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 65%;
+    background-color: rgba(255, 255, 255, 0.26);
+    width: 100%;
+    height: 200px;
+}
+
+#logoImage {
+    height: 150px;
+    width: 150px;
+    color: white;
+}
+
+#logoText {
+    font-size: xx-large;
+    font-weight: bolder;
+    color: #F9FAFB;
+}
+
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.959);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
