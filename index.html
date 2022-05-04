@@ -11,9 +11,9 @@
 <body>
     <div id="mainContentContainer">
         <div id="imageContainer">
-            <img id="imgHallway" src="/ameer-basheer-XP7QZpvbnKY-unsplash.jpg" alt="Highlighter Hallway">
+            <img id="imgHallway" src="./ameer-basheer-XP7QZpvbnKY-unsplash.jpg" alt="Highlighter Hallway">
             <div id="logoContainer">
-                <img id="logoImage" src="/ThumbsPotleaf.svg" alt="Potleaf created from Thumbs Up's">
+                <img id="logoImage" src="./ThumbsPotleaf.svg" alt="Potleaf created from Thumbs Up's">
                 <p id="logoText">DopeWarz</p>
             </div>
             <div id="imageAttribution">
@@ -25,7 +25,7 @@
             <div class="formSection" id="formDescription">
                 <p>
                     This is not a real online service! You know you need something like this
-                    in your life to help you realize your deepest dreams. Sign up <em>now</em>
+                    in your life to help you realize your deepest dreams. <br>Sign up <em>now</em> 
                     to get started.
                 </p>
                 <br>
@@ -44,24 +44,25 @@
                     </div>
                     <div class="formInput">
                         <label for="email">EMAIL</label>
-                        <input type="text" for="firstName">
+                        <input type="email" for="firstName">
                     </div>
                     <div class="formInput">
                         <label for="phone">PHONE NUMBER</label>
-                        <input type="text" for="phone">
+                        <input type="tel" for="phone">
                     </div>
-                    <div class="formInput">
+                    <div class="formInput" id="passwordInput">
                         <label for="password">PASSWORD</label>
-                        <input type="text" for="password">
+                        <input type="password" for="password" required>
+                        <span></span>
                     </div>
                     <div class="formInput">
                         <label for="confirmPass">CONFIRM PASSWORD</label>
-                        <input type="text" for="confirmPass">
+                        <input type="password" for="confirmPass" required>
                     </div>
                 </fieldset>
             </div>
             <div class="formSection">
-                <input type="submit" value="Create Account">
+                <button type="submit" value="Create Account">Create Account</button>
                 <p>Already have an account? <a href="/loginPage.html">Log in</a></p>
             </div>
         </form>

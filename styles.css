@@ -1,6 +1,6 @@
 @font-face {
     font-family: Drugs;
-    src: url("/Drugs.otf");
+    src: url("./Drugs.otf");
 }
 :root {
     --main-color: #0E0E0E;
@@ -10,10 +10,12 @@
 body {
     background-color: var(--main-color);
     font-family: Drugs;
+    letter-spacing: 0.05rem;
 }
 
 #mainContentContainer {
     display: flex;
+    justify-content: center;
     max-width: 75vw;
     margin: auto;
 }
@@ -26,27 +28,47 @@ body {
 #imageContainer {
     position: relative;
     text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    height: 100vh;
 }
 
 #imageAttribution {
     position: relative;
     bottom: 30px;
+    color: white;
 }
+
+#imageAttribution a {
+    color: white;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.959);
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    /* justify-content: center; */
+}
+
 
 .formSection {
     /* border: 2px solid rgb(255, 0, 0); */
     padding: 20px;
+    padding-right: 100px;
+    max-width: 570px;
 }
 
 form>.formSection:first-of-type {
-    padding: 20vh 50px 50px 30px;
-    margin-top: 0;
+    padding: 0 0 50px 40px;
+    margin-top: 200px;
     font-size: larger;
     font-weight: 900;
+    line-height: 1.5rem;
 }
 
 form>.formSection:nth-child(2) {
-    box-shadow: 0 4px 4px -4px grey;
+    box-shadow: 0 8px 4px -4px rgb(219, 219, 219);
     border-top: 1px solid rgb(228, 228, 228);
     background-color: #F9FAFB;
 }
@@ -55,22 +77,71 @@ form>.formSection:nth-child(2) {
     font-size: x-large;
     font-weight: 900;
     margin-bottom: 15px;
+    padding-left: 20px;
 }
 
 .formSection:nth-child(2) label {
-    font-size: smaller;
+    font-size: x-small;
+    font-weight: 900;
+    padding: 5px 0 5px 0;
+}
+
+.formSection:nth-child(2) input {
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 2px;
+    width: 180px;
+    height: 20px;
+}
+
+.formSection:nth-child(2) input:focus {
+    border-color: rgb(106, 170, 255);
+    box-shadow: 2px 2px 2px rgb(219, 219, 219);
+}
+
+.formSection:nth-child(2) input:invalid {
+    border: 1px solid red;
+}
+
+input:invalid + span::after {
+    content: '* Passwords do not match';
+    color: red;
+    font-size: small;
+    margin-top: 4px;
+}
+
+.formSection:last-of-type {
+    padding-top: 30px;
+    padding-left: 40px;
+}
+
+.formSection:last-of-type > button {
+    width: 200px;
+    height: 40px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #596D48;
+    font-size: medium;
     font-weight: 900;
 }
 
-.formSection:nth-child(2) .formInput {
-    margin: 5px 25px 5px 0;
+.formSection:last-of-type p {
+    font-weight: 900;
 }
 
-
+p > a {
+    text-decoration: none;
+    color: #596D48;
+    text-shadow: -0.2px -0.2px 0 #596D48, 0.2px -0.2px 0 #596D48, 0.2px 0.2px 0 #596D48;
+    
+}
 
 .formInput {
     display: flex;
     flex-direction: column;
+    padding: 0 50px 0 20px;
+    margin: 5px 25px 5px 0;
 }
 
 #logoContainer {
@@ -101,11 +172,6 @@ form>.formSection:nth-child(2) {
     flex-wrap: wrap;
 }
 
-form {
-    background-color: rgba(255, 255, 255, 0.959);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
+em {
+    text-shadow: -0.15px -0.15px 0 black, 0.15px -0.15px 0 black, 0.15px 0.15px 0 black;
 }
-
