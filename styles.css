@@ -158,14 +158,19 @@ p > a {
     bottom: 65%;
     background-color: rgba(255, 255, 255, 0.26);
     width: 100%;
-    height: 200px;
+    height: 10%;
 }
 
 #logoImage {
+    height: 100%;
+    width: auto;
+}
+
+/* #logoImage {
     height: 150px;
     width: 150px;
     color: white;
-}
+} */
 
 #logoText {
     font-size: xx-large;
@@ -221,5 +226,11 @@ em {
 @media screen and (max-height: 420px) {
     #imageAttribution {
         bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    #logoContainer {
+        height: 15%;
     }
 }
