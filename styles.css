@@ -17,12 +17,15 @@ body {
     display: flex;
     justify-content: center;
     max-width: 75vw;
+    min-width: 350px;
     margin: auto;
 }
 
 #imgHallway {
     width: max(33vw, 500px);
-    height: 100vh;
+    height: auto;
+    max-height: 100%;
+    /* margin: 50% auto; */
 }
 
 #imageContainer {
@@ -31,6 +34,9 @@ body {
     padding-bottom: 0;
     margin-bottom: 0;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #imageAttribution {
@@ -174,4 +180,46 @@ p > a {
 
 em {
     text-shadow: -0.15px -0.15px 0 black, 0.15px -0.15px 0 black, 0.15px 0.15px 0 black;
+}
+
+@media screen and (max-width: 900px), (max-height: 420px) {
+    #mainContentContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #imageContainer {
+        height: 20vh;
+        min-height: 100px;
+    }
+
+    #imgHallway {
+        width: 100%;
+    }
+
+    #logoContainer {
+        height: 50%;
+        bottom: 30%
+    }
+
+    #logoImage {
+        height: 100%;
+        width: auto;
+    }
+
+    #imageAttribution {
+        font-size: 80%;
+        bottom: 10px;
+    }
+
+    form>.formSection:first-of-type {
+        margin: 20px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-height: 420px) {
+    #imageAttribution {
+        bottom: 10px;
+    }
 }
